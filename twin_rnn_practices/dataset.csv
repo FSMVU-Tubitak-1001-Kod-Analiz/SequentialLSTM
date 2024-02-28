@@ -1,0 +1,271 @@
+Smelly Code,Fixed Code,Label
+"class MyClass {
+    public boolean equals(MyClass other) {
+        return this == other;
+    }
+}","class MyClass {
+    public boolean equals(MyClass other) {
+        return this.equals(other);
+    }
+}",1
+"class Person {
+    public boolean equals(Person other) {
+        return this.age == other.age;
+    }
+}","class Person {
+    public boolean equals(Person other) {
+        return this.age.equals(other.age);
+    }
+}",1
+"class Book {
+    public boolean equals(Book other) {
+        return this.title == other.title;
+    }
+}","class Book {
+    public boolean equals(Book other) {
+        return this.title.equals(other.title);
+    }
+}",1
+"class Rectangle {
+    public boolean equals(Rectangle other) {
+        return this.width == other.width;
+    }
+}","class Rectangle {
+    public boolean equals(Rectangle other) {
+        return this.width.equals(other.width);
+    }
+}",1
+"class Team {
+    public boolean equals(Team other) {
+        return this.players == other.players;
+    }
+}","class Team {
+    public boolean equals(Team other) {
+        return this.players.equals(other.players);
+    }
+}",1
+"class Point {
+    public boolean equals(Point other) {
+        return this.x == other.x;
+    }
+}","class Point {
+    public boolean equals(Point other) {
+        return this.x.equals(other.x);
+    }
+}",1
+"class Circle {
+    public boolean equals(Circle other) {
+        return this.radius == other.radius;
+    }
+}","class Circle {
+    public boolean equals(Circle other) {
+        return this.radius.equals(other.radius);
+    }
+}",1
+"class Car {
+    public boolean equals(Car other) {
+        return this.make == other.make;
+    }
+}","class Car {
+    public boolean equals(Car other) {
+        return this.make.equals(other.make);
+    }
+}",1
+"class Animal {
+    public boolean equals(Animal other) {
+        return this.species == other.species;
+    }
+}","class Animal {
+    public boolean equals(Animal other) {
+        return this.species.equals(other.species);
+    }
+}",1
+"class Node {
+    public boolean equals(Node other) {
+        return this.value == other.value;
+    }
+}","class Node {
+    public boolean equals(Node other) {
+        return this.value.equals(other.value);
+    }
+}",1
+"if (condition1) {
+    doSomething();
+} else if (condition2) {
+    doAnotherThing();
+}","if (condition1) {
+    doSomething();
+} else if (condition2) {
+    doAnotherThing();
+} else {
+    handleElseCase();
+}",2
+"if (x > 0) {
+    System.out.println(""Positive"");
+} else if (x < 0) {
+    System.out.println(""Negative"");
+}","if (x > 0) {
+    System.out.println(""Positive"");
+} else if (x < 0) {
+    System.out.println(""Negative"");
+} else {
+    System.out.println(""Zero"");
+}",2
+"if (isSunny) {
+    goToTheBeach();
+} else if (isRaining) {
+    stayAtHome();
+}","if (isSunny) {
+    goToTheBeach();
+} else if (isRaining) {
+    stayAtHome();
+} else {
+    doSomethingElse();
+}",2
+"if (userInput.equals(""A"")) {
+    performActionA();
+} else if (userInput.equals(""B"")) {
+    performActionB();
+}","if (userInput.equals(""A"")) {
+    performActionA();
+} else if (userInput.equals(""B"")) {
+    performActionB();
+} else {
+    performDefaultAction();
+}",2
+"if (temperature > 30) {
+    turnOnAirConditioner();
+} else if (temperature < 10) {
+    turnOnHeater();
+}","if (temperature > 30) {
+    turnOnAirConditioner();
+} else if (temperature < 10) {
+    turnOnHeater();
+} else {
+    maintainCurrentTemperature();
+}",2
+"if (hour < 12) {
+    greet(""Good morning"");
+} else if (hour < 18) {
+    greet(""Good afternoon"");
+}","if (hour < 12) {
+    greet(""Good morning"");
+} else if (hour < 18) {
+    greet(""Good afternoon"");
+} else {
+    greet(""Good evening"");
+}",2
+"if (isWeekend) {
+    relaxAtHome();
+} else if (isWeekday) {
+    goToWork();
+}","if (isWeekend) {
+    relaxAtHome();
+} else if (isWeekday) {
+    goToWork();
+} else {
+    doSomethingElse();
+}",2
+"if (grade >= 90) {
+    System.out.println(""A"");
+} else if (grade >= 80) {
+    System.out.println(""B"");
+}","if (grade >= 90) {
+    System.out.println(""A"");
+} else if (grade >= 80) {
+    System.out.println(""B"");
+} else {
+    System.out.println(""C"");
+}",2
+"if (isEmpty) {
+    handleEmptyCase();
+} else if (hasData) {
+    processData();
+}","if (isEmpty) {
+    handleEmptyCase();
+} else if (hasData) {
+    processData();
+} else {
+    handleNoData();
+}",2
+"if (isAuthenticated) {
+    allowAccess();
+} else if (isGuest) {
+    restrictAccess();
+}","if (isAuthenticated) {
+    allowAccess();
+} else if (isGuest) {
+    restrictAccess();
+} else {
+    handleUnauthenticatedAccess();
+}",2
+"if (condition1) {
+    if (condition2) {
+        /* ... */
+    }
+}","if (condition1 && condition2) {
+    /* ... */
+}",3
+"if (x > 0) {
+    if (y < 0) {
+        /* ... */
+    }
+}","if (x > 0 && y < 0) {
+    /* ... */
+}",3
+"if (isSunny) {
+    if (isWeekend) {
+        /* ... */
+    }
+}","if (isSunny && isWeekend) {
+    /* ... */
+}",3
+"if (userInput.equals(""A"")) {
+    if (userRole.equals(""Admin"")) {
+        /* ... */
+    }
+}","if (userInput.equals(""A"") && userRole.equals(""Admin"")) {
+    /* ... */
+}",3
+"if (temperature > 30) {
+    if (humidity > 80) {
+        /* ... */
+    }
+}","if (temperature > 30 && humidity > 80) {
+    /* ... */
+}",3
+"if (hour < 12) {
+    if (isMorning) {
+        /* ... */
+    }
+}","if (hour < 12 && isMorning) {
+    /* ... */
+}",3
+"if (isWeekend) {
+    if (isHoliday) {
+        /* ... */
+    }
+}","if (isWeekend && isHoliday) {
+    /* ... */
+}",3
+"if (grade >= 90) {
+    if (isExcellent) {
+        /* ... */
+    }
+}","if (grade >= 90 && isExcellent) {
+    /* ... */
+}",3
+"if (isEmpty) {
+    if (hasNoData) {
+        /* ... */
+    }
+}","if (isEmpty && hasNoData) {
+    /* ... */
+}",3
+"if (isAuthenticated) {
+    if (isAdmin) {
+        /* ... */
+    }
+}","if (isAuthenticated && isAdmin) {
+    /* ... */
+}",3
